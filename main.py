@@ -19,6 +19,11 @@ def home():
         time = request.form["time"] #how long have you been playing Minecraft
         guidelines = request.form["guidelines"]
 
+        if guidelines = "on":
+          guidelines = "Yes"
+        else:
+          guidelines = "No"
+      
         webhook = DiscordWebhook(url='https://discord.com/api/webhooks/1096090761575018587/iNNmDj8pQlwaAq-7CxbBaLRu_nEkJOVNJaUJo_4Fh5Co6nLlDnr-2Qt8UTrAaXUQonj9')
         
         # create embed object for webhook
@@ -28,8 +33,17 @@ def home():
         embed.set_timestamp()
         
         # add fields to embed
-        embed.add_embed_field(name='Field 1', value='Lorem ipsum')
-        embed.add_embed_field(name='Field 2', value='dolor sit')
+        embed.add_embed_field(name='Username', value=username)
+        embed.add_embed_field(name='Age', value=age)
+        embed.add_embed_field(name='Location', value=country)
+        embed.add_embed_field(name='How often they play', value=play)
+        embed.add_embed_field(name='Why they want to join', value=join)
+        embed.add_embed_field(name='Favourite aspect of Minecraft', value=fav)
+        embed.add_embed_field(name='Discord usage', value=discord)
+        embed.add_embed_field(name='Are they mature?', value=mature)
+        embed.add_embed_field(name='previous Smp', value=smp)
+        embed.add_embed_field(name='How long they have played', value=time)
+        embed.add_embed_field(name='Read and accepted Guidelines', value=guidelines)
         
         # add embed object to webhook
         webhook.add_embed(embed)

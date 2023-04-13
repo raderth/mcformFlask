@@ -17,8 +17,9 @@
       <p>Age: </p>
       <input class="small" name="age"/>
       <br/><br/>
-      <p>Location:</p>
+      <p>Location: <i>*optional</i></p>
         <select id="country" name="country" class="form-control">
+                <option value="none">--None--</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -286,7 +287,7 @@
       <p>How long have you been playing Minecraft?</p>
       <input name="time"/>
       <br/><br/>
-      <p>Do you play on any other SMP's and if so can you list?</p>
+      <p>Do you play on any other SMP's and if so can you list? <i>*optional</i></p>
       <input name="other"/>
       <br/><br/>
       <p>Have you read and do you agree to abide by the server rules and guidelines?</p>
@@ -312,6 +313,8 @@
     margin: 0;
     border-radius: 2rem;
     margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     width: fit-content;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -329,5 +332,8 @@
   input.small {
     height: 1rem;
     width: 20%;
+  }
+  i {
+    color: #C0C0C0
   }
 </style>
